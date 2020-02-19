@@ -1,0 +1,23 @@
+{
+    "customer": [{
+      "tipo_documento": "CC",
+      "documento": 102323222,
+      "primer_nombre":"sara",
+      "segundo_nombre": "maria",
+      "primer_apellido": "Arias",
+      "segundo_apelliso": "Gomez",
+      "celular": "311263767",
+      "direccion": "carrera 8",
+      "email": "sara@hotmail.com"}
+    , {
+        "tipo_documento": "CC",
+        "documento": 102323223,
+        "primer_nombre":"sara",
+        "segundo_nombre": "maria",
+        "primer_apellido": "Arias",
+        "segundo_apelliso": "Gomez",
+        "celular": "311263768",
+        "direccion": "carrera 8",
+        "email": "sara@hotmail.com"
+    }]
+  }

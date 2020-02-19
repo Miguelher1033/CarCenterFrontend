@@ -1,0 +1,111 @@
+<div class="container app">
+  <div class="row"> 
+    <div class="col-sm-8">
+       <h1 class="text-center">
+        {{title}}ng 
+      </h1>
+    </div>
+    <div class="col-sm-4">
+      <div class="alert alert-success alert-dismissable" *ngIf="msg">
+        <a href="#" class="close" (click)="closeAlert()">
+          &times;
+        </a>
+        {{msg}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="tipo Documento" class="control-label col-sm-3">
+            Tipo documento
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="tipo_documento"
+              name="tipo_documento" [(ngModel)]="model.tipo_documento"
+              placeholder="Tipo de documento"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="documento" class="control-label col-sm-3">
+            Documento
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="documento"
+              name="documento" [(ngModel)]="model.documento"
+              placeholder="Número documento">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10 col-sm-offset-3">
+            <button id="findButton" type="submit" class="btn btn-success" style="margin-right:3px;" (click)="findCustomer()">
+              Buscar
+            </button>
+            <button id="newButton" type="submit" class="btn btn-success" style="margin-right:3px;" (click)="newCustomer()">
+              Nuevo
+            </button>
+            <button id="saveButton" type="submit" class="btn btn-success" style="margin-right:3px; display: none;" (click)="addCustomer()">
+              Guardar
+            </button>
+            <button id="updateButton" type="submit" class="btn btn-success" style="margin-right:3px; display: none;" (click)="saveCustomer()">
+              Actulizar
+            </button>
+            
+          </div>
+        </div>
+      </form>
+    </div>
+  
+  
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Tipo doc.</th>
+            <th>Documento</th>
+            <th>Nombre 1</th>
+            <th>Nombre 2</th>
+            <th>Apellido 1</th>
+            <th>Apellido 2</th>
+            <th>Celuar</th>
+            <th>Direccion</th>
+            <th>Email</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let customer of customers; let i = index">
+            <td>{{customer.tipo_documento}}</td>
+            <td>{{customer.documento}}</td>
+            <td>{{customer.primer_nombre}}</td>
+            <td>{{customer.segundo_nombre}}</td>
+            <td>{{customer.primer_apellido}}</td>
+            <td>{{customer.segundo_apellido}}</td>
+            <td>{{customer.celuar}}</td>
+            <td>{{customer.direccion}}</td>
+            <td>{{customer.email}}</td>
+            <td>
+              <a 
+                (click)="deleteCustomer(i)"
+                class="btn btn-danger">
+              Eliminar
+              </a>
+            </td>
+            <td>
+              <a 
+                (click)="editCustomer(i)"
+                class="btn btn-success">
+              Editar
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,133 @@
+<div class="container app">
+  <div class="row"> 
+    <div class="col-sm-8">
+      <h1 class="text-center">
+        {{title}}
+      </h1>
+    </div>
+    <div class="col-sm-4">
+      <div class="alert alert-success alert-dismissable" *ngIf="msg">
+        <a href="#" class="close" (click)="closeAlert()">
+          &times;
+        </a>
+        {{msg}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="tipo Documento" class="control-label col-sm-3">
+            Tipo documento
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="tipo_documento"
+              name="tipo_documento" [(ngModel)]="model.tipo_documento"
+              placeholder="Tipo de documento"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="documento" class="control-label col-sm-3">
+            Documento
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="documento"
+              name="documento" [(ngModel)]="model.documento"
+              placeholder="Número documento"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="primer_nombre" class="control-label col-sm-3">
+            Primer nombre
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="primer_nombre"
+              name="primer_nombre" [(ngModel)]="model.primer_nombre"
+              placeholder="Primer nombre"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="segundo_nombre" class="control-label col-sm-3">
+            Segundo nombre
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="segundo_nombre"
+              name="segundo_nombre" [(ngModel)]="model.segundo_nombre"
+              placeholder="Segundo nombre"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="primer_apellido" class="control-label col-sm-3">
+            Primer Apellido
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="primer_apellido"
+              name="primer_apellido" [(ngModel)]="model.primer_apellido"
+              placeholder="Primer apellido"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="segundo_apellido" class="control-label col-sm-3">
+            Segundo apellido
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="segundo_apellido"
+              name="segundo_apellido" [(ngModel)]="model.segundo_apellido"
+              placeholder="Segundo apellido"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="celular" class="control-label col-sm-3">
+            Celular
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="celular"
+              name="celular" [(ngModel)]="model.celular"
+              placeholder="Celular"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="direccion" class="control-label col-sm-3">
+            Dirección
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="direccion"
+              name="direccion" [(ngModel)]="model.direccion"
+              placeholder="Direccion"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="control-label col-sm-3">
+            Email
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="email"
+              name="email" [(ngModel)]="model.email"
+              placeholder="Email"
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-10 col-sm-offset-3">
+            <button type="submit" class="btn btn-success" style="margin-right:3px;" (click)="addCustomer()">
+              Guardar
+            </button>
+            <button type="submit" class="btn btn-success" style="margin-right:3px;" (click)="cancelCustomer()">
+              Cancelar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
